@@ -5,13 +5,25 @@ class LifecycleComponent extends Component {
   };
   componentDidMount() {
     console.log("componentDidMount");
-    let url = "https://todo-redev.herokuapp.com/api/todos?isCompleted=true";
-    let response = fetch(url, {
-      method: "GET",
-    })
-      .then((res) => res.json())
-      .then((data) => console.log(data))
-      .catch(console.log("error2"));
+    let url = "https://todo-redev.herokuapp.com/api/auth/login";
+    let getResourse = async () => {
+      await fetch(url, {
+        headers: {
+          "content-type": "application/json",
+          token:
+            "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InZsYWQ4QG1haWwucnUiLCJpZCI6MjkyLCJpYXQiOjE3MDU1MjM0ODJ9.n6eokA4Ma5wWiM0zSwzzr33gkqYzN5Vnf3xec-mF3q8",
+        },
+        method: "POST",
+        body: JSON.stringify({
+          email: "vlad8@mail.ru",
+          password: "Hello_34",
+        }),
+      })
+        .then((res) => console.log(res))
+        .then((data) => console.log(data))
+        .catch(console.log("error2"));
+    };
+    getResourse();
   }
   shouldComponentUpdate(nextProps, nextState) {
     console.log(this.state.count);
