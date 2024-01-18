@@ -44,7 +44,7 @@ class LifecycleComponent extends Component {
     const { count } = this.state;
     return (
       <div>
-        {count}
+        <p>Вы нажали {count} раз</p>
         <button onClick={() => this.setState({ count: this.state.count + 1 })}>
           +
         </button>

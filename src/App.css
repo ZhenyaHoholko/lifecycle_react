@@ -1,0 +1,14 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz@8..144&display=swap");
+.main {
+  font-family: "Roboto Flex", sans-serif;
+  height: 70vh;
+  width: 70vw;
+}
+.box {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: blueviolet;
+}
