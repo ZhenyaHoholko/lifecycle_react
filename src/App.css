@@ -1,16 +1,37 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz@8..144&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap");
 .main {
-  font-family: "Roboto Flex", sans-serif;
-  height: 50vh;
+  font-family: "Rubik", sans-serif;
+  height: 70vh;
   width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .box {
   display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
   justify-content: center;
+  flex-direction: column;
+  flex-wrap: nowrap;
   align-items: center;
   text-align: center;
-  background-color: blueviolet;
-  padding: 10px;
+  background-color: rgb(194, 156, 229);
+  padding: 20px;
+  border-radius: 10px;
+  background-position: 30%;
+}
+
+h1 {
+  font-family: "Rubik", sans-serif;
+  font-size: 20px;
+  color: rgb(63, 44, 232);
+  display: flex;
+  justify-content: center;
+  line-height: 56px;
+  padding: 0 10px;
+  background: rgba(22, 250, 147, 0.8);
+  border-radius: 10px;
+}
+.number-conten {
+  font-size: 25px;
 }

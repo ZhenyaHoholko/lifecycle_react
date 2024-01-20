@@ -1,4 +1,5 @@
 import { Component } from "react";
+import { Button, Flex } from "antd";
 class LifecycleComponent extends Component {
   state = {
     count: 0,
@@ -43,11 +44,14 @@ class LifecycleComponent extends Component {
   render() {
     const { count } = this.state;
     return (
-      <div>
-        <p>Вы нажали {count} раз</p>
-        <button onClick={() => this.setState({ count: this.state.count + 1 })}>
+      <div className="box-content">
+        <p>
+          Вы нажали <span className="number-conten">{count}</span>
+          <span /> раз
+        </p>
+        <Button onClick={() => this.setState({ count: this.state.count + 1 })}>
           +
-        </button>
+        </Button>
       </div>
     );
   }

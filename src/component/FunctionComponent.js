@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Button, Flex } from "antd";
 
 function FunctionComponent() {
   let [num, setNum] = useState(0);
@@ -31,9 +32,15 @@ function FunctionComponent() {
   }, [num]);
 
   return (
-    <div>
-      <p>Вы нажали {(num + 1) % 2 == 0 ? num - 1 : num} раз</p>
-      <button onClick={() => setNum((prev) => prev + 1)}>+</button>
+    <div className="box-content">
+      <p>
+        Вы нажали{" "}
+        <span className="number-conten">
+          {(num + 1) % 2 == 0 ? num - 1 : num}
+        </span>{" "}
+        раз
+      </p>
+      <Button onClick={() => setNum((prev) => prev + 1)}>+</Button>
     </div>
   );
 }
